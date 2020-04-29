@@ -40,56 +40,58 @@ class EstatisticaSimples
 	end
 end
 
-def sacar
-	puts 'Digite o valor a ser sacado'
-  valor_saque = gets.to_f
-  aux_valor_saque = valor_saque
-  n100 = (aux_valor_saque/100).to_i 
-  n50 = ((aux_valor_saque % 100)/50).to_i 
-  n20 = (((aux_valor_saque % 100)% 50) /20).to_i
-  n10 = ((((aux_valor_saque % 100) % 50) % 20)/10).to_i
-  n5 = (((((aux_valor_saque % 100) % 50) % 20) % 10) / 5).to_i
-  n2 = ((((((aux_valor_saque % 100) % 50) % 20) % 10) % 5)/ 2).to_i
-  m1 = (((((((aux_valor_saque % 100) % 50) % 20) % 10) % 5) % 2) / 1).to_i
-  puts 'NOTAS:'
-  if n100 >= 0
-    puts "%d nota(s) de R$ 100.00" %[n100]
-  end
-  if n50 >= 0
-    puts "%d nota(s) de R$ 50.00" %[n50]
-  end
-  if n20 >= 0
-    puts "%d nota(s) de R$ 20.00" %[n20] 
-  end
-  if n10 >= 0
-    puts "%d nota(s) de R$ 10.00" %[n10]
-  end
-  if n5 >= 0
-    puts "%d nota(s) de R$ 5.00" %[n5]
-  end
-  if n2 >= 0
-    puts "%d nota(s) de R$ 2.00" %[n2]
-  end
-  if m1 >= 0
-    puts "%d moedas(s) de R$ 1.00" %[m1]
-  end
+class CaixaEletronico
+  def sacar
+    puts 'Digite o valor a ser sacado'
+    valor_saque = gets.to_f
+    aux_valor_saque = valor_saque
+    n100 = (aux_valor_saque/100).to_i 
+    n50 = ((aux_valor_saque % 100)/50).to_i 
+    n20 = (((aux_valor_saque % 100)% 50) /20).to_i
+    n10 = ((((aux_valor_saque % 100) % 50) % 20)/10).to_i
+    n5 = (((((aux_valor_saque % 100) % 50) % 20) % 10) / 5).to_i
+    n2 = ((((((aux_valor_saque % 100) % 50) % 20) % 10) % 5)/ 2).to_i
+    m1 = (((((((aux_valor_saque % 100) % 50) % 20) % 10) % 5) % 2) / 1).to_i
+    puts 'NOTAS:'
+    if n100 >= 0
+      puts "%d nota(s) de R$ 100.00" %[n100]
+    end
+    if n50 >= 0
+      puts "%d nota(s) de R$ 50.00" %[n50]
+    end
+    if n20 >= 0
+      puts "%d nota(s) de R$ 20.00" %[n20] 
+    end
+    if n10 >= 0
+      puts "%d nota(s) de R$ 10.00" %[n10]
+    end
+    if n5 >= 0
+      puts "%d nota(s) de R$ 5.00" %[n5]
+    end
+    if n2 >= 0
+      puts "%d nota(s) de R$ 2.00" %[n2]
+    end
+    if m1 >= 0
+      puts "%d moedas(s) de R$ 1.00" %[m1]
+    end
 
-  moeda = aux_valor_saque * 100 % 100
-  m50 = (moeda / 50).to_i
-  m25 = ((moeda % 50) / 25).to_i
-  m10 = (((moeda % 50) % 25) / 10).to_i
-  m5 = ((((moeda % 50) % 25) % 10) / 5).to_i
-  m01 = (((((moeda % 50) % 25) % 10) % 5) / 1).to_i
-  if m50 >= 0:
-    puts "%d nota(s) de R$ 2.00" %[m50]
-  if m25 >= 0:
-    puts "%d nota(s) de R$ 2.00" %[m25]
-  if m10 >= 0:
-    puts "%d nota(s) de R$ 2.00" %[m10]
-  if m5 >= 0:
-    puts "%d nota(s) de R$ 2.00" %[m5]
-  if m01 >= 0:
-    puts "%d nota(s) de R$ 2.00" %[m01]
+    moeda = aux_valor_saque * 100 % 100
+    m50 = (moeda / 50).to_i
+    m25 = ((moeda % 50) / 25).to_i
+    m10 = (((moeda % 50) % 25) / 10).to_i
+    m5 = ((((moeda % 50) % 25) % 10) / 5).to_i
+    m01 = (((((moeda % 50) % 25) % 10) % 5) / 1).to_i
+    if m50 >= 0:
+      puts "%d nota(s) de R$ 2.00" %[m50]
+    if m25 >= 0:
+      puts "%d nota(s) de R$ 2.00" %[m25]
+    if m10 >= 0:
+      puts "%d nota(s) de R$ 2.00" %[m10]
+    if m5 >= 0:
+      puts "%d nota(s) de R$ 2.00" %[m5]
+    if m01 >= 0:
+      puts "%d nota(s) de R$ 2.00" %[m01]
+  end
 end
 
 
