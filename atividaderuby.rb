@@ -1,43 +1,43 @@
 class FizzBuzz
-	def fizzbuzz
-		for i in (1..100)
-			if i % 3 == 0 && i % 5 == 0
-				puts "FizzBuzz"
-			elsif i % 3 == 0
-				puts "Fizz"
-			elsif i % 5 == 0
-				puts "Buzz"
-			else 
-				puts i
-			end
-		end
-	end
+  def fizzbuzz
+    for i in (1..100)
+      if i % 3 == 0 && i % 5 == 0
+        puts "FizzBuzz"
+      elsif i % 3 == 0
+        puts "Fizz"
+      elsif i % 5 == 0
+        puts "Buzz"
+      else 
+        puts i
+      end
+    end
+  end
 end
 
 class EstatisticaSimples
-	def estatistica
-	  val_max = 0
-	  val_min = 0
-	  count_num = 0
-	  val_media = 0
-	  soma = 0
-	  list = [6,9,15,-2,92,11]
-	  while count_num <= (list.count - 1) do
-	    if list[count_num] > val_max
-	      val_max = list[count_num]
-	    end
-	    if list[count_num] < val_min
-	      val_min = list[count_num]  
-	    end
-	    soma += list[count_num]
-	    count_num += 1
-	  end
-	  val_media = (soma/list.count)
-	  puts "Valor mínimo --_ #{val_min}"
-	  puts "Valor máximo--> #{val_max}"		
-	  puts "Números de valores na sequencia --> #{count_num}"
-	  puts "Valor médio --> #{val_media}"
-	end
+  def estatistica
+    val_max = 0
+    val_min = 0
+    count_num = 0
+    val_media = 0
+    soma = 0
+    list = [6,9,15,-2,92,11]
+    while count_num <= (list.count - 1) do
+      if list[count_num] > val_max
+        val_max = list[count_num]
+      end
+      if list[count_num] < val_min
+        val_min = list[count_num]  
+      end
+      soma += list[count_num]
+      count_num += 1
+    end
+    val_media = (soma/list.count)
+    puts "Valor mínimo --_ #{val_min}"
+    puts "Valor máximo--> #{val_max}"   
+    puts "Números de valores na sequencia --> #{count_num}"
+    puts "Valor médio --> #{val_media}"
+  end
 end
 
 class CaixaEletronico
@@ -100,7 +100,7 @@ end
 
 
 class Triangulos
-	def triangulos
+  def triangulos
   puts 'Digite o valor do primeiro lado'
   lado_1 = gets.to_i
   puts 'Digite o valor do segundo lado'
@@ -122,5 +122,5 @@ class Triangulos
   if lado_1 == lado_2 and lado_1 == lado_3 and lado_2 == lado_3
     puts 'Triângulo equilátero: Todos os lados são iguais.'
   end
-	end
+  end
 end
