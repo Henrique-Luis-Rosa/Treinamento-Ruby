@@ -80,16 +80,21 @@ class CaixaEletronico
     m10 = (((moeda % 50) % 25) / 10).to_i
     m5 = ((((moeda % 50) % 25) % 10) / 5).to_i
     m01 = (((((moeda % 50) % 25) % 10) % 5) / 1).to_i
-    if m50 >= 0:
-      puts "%d nota(s) de R$ 2.00" %[m50]
-    if m25 >= 0:
-      puts "%d nota(s) de R$ 2.00" %[m25]
-    if m10 >= 0:
-      puts "%d nota(s) de R$ 2.00" %[m10]
-    if m5 >= 0:
-      puts "%d nota(s) de R$ 2.00" %[m5]
-    if m01 >= 0:
-      puts "%d nota(s) de R$ 2.00" %[m01]
+    if m50 >= 0
+      puts "%d nota(s) de R$ 0.50" %[m50]
+    end
+    if m25 >= 0
+      puts "%d nota(s) de R$ 0.25" %[m25]
+    end 
+    if m10 >= 0
+      puts "%d nota(s) de R$ 0.10" %[m10]
+    end
+    if m5 >= 0
+      puts "%d nota(s) de R$ 0.05" %[m5]
+    end
+    if m01 >= 0
+      puts "%d nota(s) de R$ 0.01" %[m01]
+    end
   end
 end
 
