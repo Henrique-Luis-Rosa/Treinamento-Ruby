@@ -74,7 +74,6 @@ class CaixaEletronico
     if m1 >= 0
       puts "%d moedas(s) de R$ 1.00" %[m1]
     end
-
     moeda = aux_valor_saque * 100 % 100
     m50 = (moeda / 50).to_i
     m25 = ((moeda % 50) / 25).to_i
